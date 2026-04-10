@@ -1,0 +1,21 @@
+id,user_id,amount,transaction_time,location,merchant,card_type,is_fraud
+1,1,25.5,830,New York,Amazon,Visa,0
+2,2,4999.99,120,Los Angeles,LuxuryCars,MasterCard,1
+3,3,75.0,1430,Chicago,Walmart,Visa,0
+4,4,3200.0,50,Miami,RolexStore,Amex,1
+5,5,200.0,900,Houston,BestBuy,Visa,0
+6,6,9999.99,300,Las Vegas,CasinoRoyal,MasterCard,1
+7,7,8.5,1100,Boston,Starbucks,Visa,0
+8,8,1500.0,220,San Francisco,AppleStore,Amex,0
+9,9,4500.0,45,New York,JewelryShop,Visa,1
+10,10,60.0,1330,Seattle,Target,MasterCard,0
+11,11,12.99,700,Denver,McDonalds,Visa,0
+12,12,7200.0,80,Dallas,LuxuryTravel,Amex,1
+13,13,350.0,1010,Atlanta,NikeStore,MasterCard,0
+14,14,4800.0,150,San Diego,YachtClub,Visa,1
+15,15,95.0,1230,Philadelphia,Costco,Discover,0
+16,16,2500.0,60,Orlando,DisneyTickets,Visa,0
+17,17,7800.0,210,Las Vegas,LuxuryHotel,Amex,1
+18,18,45.0,1340,Detroit,Subway,Visa,0
+19,19,5200.0,40,New York,PrivateJets,MasterCard,1
+20,20,180.0,850,San Jose,IKEA,Visa,0

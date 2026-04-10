@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Simulador de Fraude - ML</title>
+</head>
+<body class="bg-light">
+    <div class="container mt-5" style="max-width: 600px;">
+        <h2 class="text-center mb-4">Compras com Cartão de Crédito</h2>
+        
+        {% if resultado %}
+        <div class="alert alert-{{ resultado.cor }} text-center shadow-sm">
+            <h3 class="mb-0">{{ resultado.texto }}</h3>
+            <hr>
+            <p class="mb-0"><strong>Score de Risco (Probabilidade):</strong> {{ resultado.confianca }}</p>
+        </div>
+        {% endif %}
+
+        <div class="card p-4 shadow">
+            <form method="POST">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label class="form-label">Valor da Transação (R$):</label>
+                    <input type="number" name="amount" step="0.01" class="form-control" 
+                           value="{{ dados.amount|default:'' }}" placeholder="Ex: 1500.00" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Cidade:</label>
+                    <input type="text" name="location" class="form-control" 
+                           value="{{ dados.location|default:'' }}" placeholder="Ex: Las Vegas" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Estabelecimento:</label>
+                    <input type="text" name="merchant" class="form-control" 
+                           value="{{ dados.merchant|default:'' }}" placeholder="Ex: CasinoRoyal" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Cartão:</label>
+                    <select name="card_type" class="form-select">
+                        <option value="Visa" {% if dados.card_type == 'Visa' %}selected{% endif %}>Visa</option>
+                        <option value="MasterCard" {% if dados.card_type == 'MasterCard' %}selected{% endif %}>MasterCard</option>
+                        <option value="Discover" {% if dados.card_type == 'Discover' %}selected{% endif %}>Discover</option>
+                        <option value="Discover" {% if dados.card_type == 'Discover' %}selected{% endif %}>Amex</option>
+                    </select>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                    <button type="submit" class="btn btn-primary px-5">Simular Compra</button>
+                    <a href="/" class="btn btn-outline-secondary px-4">Limpar Tela</a>
+                </div>
+            </form>
+        </div>
+
+        <p class="text-muted text-center mt-4" style="font-size: 0.8rem;">
+            Desenvolvido por Sueli Sena - Java & Python Developer
+        </p>
+    </div>
+</body>
+</html>
