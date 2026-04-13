@@ -175,7 +175,8 @@ Esta imagem mostra o sistema bloqueando uma transação de alto risco (82% de pr
 2. MySQL Workbench Persistence
 Evidência de que os dados da simulação estão sendo gravados corretamente no banco.
 
-`screenshots/banco-de-dados.png`
+![Data Base](screenshots/banco-de-dados.png)
+
 
 Developed by Sueli Sena
 Analista de Sistemas | Full Stack Developer (Java & Python)
