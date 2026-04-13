@@ -1,5 +1,5 @@
 # credit_card_fraud_django
-
+# https://www.linkedin.com/in/sueli-sena/
 
 # 🛡️ End-to-End Credit Card Fraud Detection Pipeline
 
