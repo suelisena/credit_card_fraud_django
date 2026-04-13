@@ -157,14 +157,14 @@ python manage.py runserver
 2. Real-time Fraud Detection Alert
 Esta imagem mostra o sistema bloqueando uma transação de alto risco (82% de probabilidade).
 
-`screenshot/tela principal.png`
-`screenshot/transação aceita.png`
-`screenshot/transação negada.png`
+`screenshots/tela_principal.png`
+`screenshots/transação_aceita.png`
+`screenshots/transação_negada.png`
 
 2. MySQL Workbench Persistence
 Evidência de que os dados da simulação estão sendo gravados corretamente no banco.
 
-`screenshot/banco de dados.png`
+`screenshots/banco_de_dados.png`
 
 Developed by Sueli Sena
 Analista de Sistemas | Full Stack Developer (Java & Python)
